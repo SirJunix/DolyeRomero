@@ -32,7 +32,8 @@
         <tr  align="center">
             <th style="padding: 30px">Name</th>
             <th style="padding: 30px">Email</th>
-            <th style="padding: 30px">Action</th>
+            <th style="padding: 30px">Delete</th>
+            <th style="padding: 30px">Update</th>
         </tr>
         
 
@@ -44,6 +45,7 @@
 
             @if($data->usertype=="0")
             <td><a href="{{url('/deleteuser',$data->id)}}">Delete</a></td>
+            <td><a href="{{url('/deleteuser',$data->id)}}">Update</a></td>
             @else
             <td><a >Not Allowed</a></td>
 

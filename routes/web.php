@@ -36,6 +36,24 @@ Route::get("/deleteuser/{id}",[AdminController::class,"deleteuser"]);
 
 Route::get("/redirects",[HomeController::class,"redirects"]);
 
+
+
+Route::post("/reservation",[AdminController::class,"reservation"]);
+
+
+Route::get("/viewreservation",[AdminController::class,"viewreservation"]);
+
+Route::post("/addtocart/{id}",[HomeController::class,"addtocart"]);
+
+Route::get("/showcart/{id}",[HomeController::class,"showcart"]);
+
+
+Route::get("/remove/{id}",[HomeController::class,"remove"]);
+
+
+Route::post("/orderconfirm",[HomeController::class,"orderconfirm"]);
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function ()
     {
     return view('dashboard');

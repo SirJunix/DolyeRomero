@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="section-heading">
-                        <h6>Our Menu</h6>
-                        <h2>Our selection of cakes with quality taste</h2>
+                        <h6>Agriculture Products</h6>
+                        <h2>Available products for your farm is over here</h2>
                     </div>
                 </div>
             </div>
@@ -16,6 +16,9 @@
 
 
                 @foreach($data as $data)
+
+                <form action="{{url('/addtocart',$data->id)}}" method="post">
+                    @csrf
 
 
                     <div class="item">
@@ -29,7 +32,16 @@
                               </div>
                             </div>
                         </div>
+
+                        
+                        <input type="number" name="quantity" min="1" value="1" style="width: 80px;">
+                        <input type="submit" value="add to cart">
+
+
+
                     </div>
+
+                    </form>
 
 
                     @endforeach
